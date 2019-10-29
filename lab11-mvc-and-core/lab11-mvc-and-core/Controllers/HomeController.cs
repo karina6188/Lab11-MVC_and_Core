@@ -16,22 +16,12 @@ public class HomeController : Controller
     [HttpPost]
     public IActionResult Index(int fromYear, int toYear)
     {
-        Year year = new Year(fromYear, toYear);
-        return RedirectToAction("Results", year);
+        List<TimePerson> result = TimePerson.GetPersons(fromYear, toYear);
+        return RedirectToAction("Results", result);
     }
 
-    public ViewResult Results(Year year)
+    public ViewResult Results(TimePerson person)
     {
-        return View(year);
-    }
-
-    public IActionResult AllYears()
-    {
-        List<Year> years = new List<Year>
-        {
-            new Year{FromYear = 2000, ToYear = 2020}
-        };
-
-        return View(years);
+        return View(person);
     }
 }

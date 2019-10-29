@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 
 /// <summary>
 /// Summary description for Year
@@ -28,13 +30,35 @@ public class TimePerson
         Category = category;
         Context = context;
     }
-	public TimePerson()
-	{
+    public TimePerson()
+    {
 
-	}
+    }
 
     public static List<TimePerson> GetPersons(int fromYear, int toYear)
     {
-        return List<TimePerson>;
+        string[] allData = File.ReadAllLines("./wwwroot/personOfTheYear.csv");
+        List<TimePerson> people = new List<TimePerson>();
+
+        for (int i = 1; i < allData.Length; i++)
+        {
+            string[] columns = allData[i].Split(',');
+            TimePerson person = new TimePerson()
+            {
+                Year = Convert.ToInt32(columns[0]), // Convert 
+                Honor = columns[1],
+                Name = columns[2],
+                Country = columns[3],
+                BirthYear = (columns[4] == "") ? 0 : Convert.ToInt32(columns[4]),
+                DeathYear = (columns[4] == "") ? 0 : Convert.ToInt32(columns[5]),
+                Title = columns[6],
+                Category = columns[7],
+                Context = columns[8]
+            };
+            people.Add(person); // Use Add() method to add object in List
+        }
+
+        List<TimePerson> result = people.Where(p => (p.Year >= fromYear) && (p.Year <= toYear)).ToList();
+        return result;
     }
 }

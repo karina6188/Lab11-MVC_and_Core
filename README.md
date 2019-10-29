@@ -38,3 +38,7 @@ App Execution
 1.1: Set up the program and README. - 2019 Oct 29
 
 1.2: Render initial Home page. - 2019 Oct 29
+
+1.3: Add form to take in start and end years. - 2019 Oct 29
+
+1.4: Add TimePerson class to include required properties to construct objects. - 2019 Oct 29
