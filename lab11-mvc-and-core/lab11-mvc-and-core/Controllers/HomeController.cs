@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System;
+using System.Collections.Generic;
 
 /// <summary>
 /// Summary description for HomeController
@@ -22,5 +23,15 @@ public class HomeController : Controller
     public ViewResult Results(Year year)
     {
         return View(year);
+    }
+
+    public IActionResult AllYears()
+    {
+        List<Year> years = new List<Year>
+        {
+            new Year{FromYear = 2000, ToYear = 2020}
+        };
+
+        return View(years);
     }
 }

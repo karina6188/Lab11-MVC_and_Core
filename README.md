@@ -37,3 +37,4 @@ App Execution
 
 1.1: Set up the program and README. - 2019 Oct 29
 
+1.2: Render initial Home page. - 2019 Oct 29
