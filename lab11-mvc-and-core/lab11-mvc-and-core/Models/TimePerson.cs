@@ -34,11 +34,13 @@ namespace lab11_mvc_and_core.Models
             Category = category;
             Context = context;
         }
+
         public TimePerson()
         {
 
         }
-        public static List<TimePerson> GetPersons(int fromYear, int toYear)
+
+        public static List<TimePerson> GetPersons(TimeSelected timeSelected)
         {
             string[] allData = File.ReadAllLines("./wwwroot/personOfTheYear.csv");
             List<TimePerson> people = new List<TimePerson>();
@@ -60,7 +62,7 @@ namespace lab11_mvc_and_core.Models
                 };
                 people.Add(person); // Use Add() method to add object in List
             }
-            List<TimePerson> result = people.Where(p => (p.Year >= fromYear && p.Year <= toYear)).ToList();
+            List<TimePerson> result = people.Where(p => (p.Year >= timeSelected.FromYear && p.Year <= timeSelected.ToYear)).ToList();
             return result;
         }
     }

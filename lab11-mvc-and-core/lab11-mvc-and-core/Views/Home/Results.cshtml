@@ -9,20 +9,19 @@
     <h1>The person of the year: </h1>
 
     <table>
-        <thead>
-        <tr>Year</tr>
-        <tr>Honor</tr>
-        <tr>Name</tr>
-        <tr>Country</tr>
-        <tr>Birth Year</tr>
-        <tr>Death Year</tr>
-        <tr>Title</tr>
-        <tr>Category</tr>
-        <tr>Context</tr>
-        </thead>
-
-        @foreach (var person in Model)
-        {
+        <tr>
+            <td>Year</td>
+            <td>Honor</td>
+            <td>Name</td>
+            <td>Country</td>
+            <td>Birth Year</td>
+            <td>Death Year</td>
+            <td>Title</td>
+            <td>Category</td>
+            <td>Context</td>
+        <tr>
+            @foreach (var person in Model)
+            {
             <tr>
                 <td>@person.Year</td>
                 <td>@person.Honor</td>
@@ -35,6 +34,6 @@
                 <td>@person.Context</td>
             </tr>
         }
-    </table>
-</body>
+        </table>
+    </body>
 

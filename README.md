@@ -43,3 +43,7 @@ App Execution
 1.5: Store all rows of data into a List and return only objects with selected years. - 2019 Oct 29
 
 1.6: Send objects from Model to View. - 2019 Oct 29
+
+1.7: Debug and show results on Results.cshtml. - 2019 Oct 30
+
+1.8: 
