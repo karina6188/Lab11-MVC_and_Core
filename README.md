@@ -6,10 +6,7 @@ ASP.NET Core MVC Web Application
 Author: Karina Chen
 
 ## Description
-This is a ASP.NET Core MVC web application that allow a user to put in a span of 2 different years, and a list of all winners will be returned.
-
-## Approach
-
+This is a ASP.NET Core MVC web application that allow a user to put in a span of 2 different years, and a list of persons of the years will be returned.
 
 ## Getting Started
 Clone this repository to your local machine.
@@ -31,7 +28,7 @@ Open the program using Visual Studio and click "Start" button to run this progra
 ## Visuals
 
 App Execution
-![Alt whiteboarding capture]()
+![Alt whiteboarding capture](/captures/web_1.JPG)
 
 ## Change Log
 
@@ -42,3 +39,7 @@ App Execution
 1.3: Add form to take in start and end years. - 2019 Oct 29
 
 1.4: Add TimePerson class to include required properties to construct objects. - 2019 Oct 29
+
+1.5: Store all rows of data into a List and return only objects with selected years. - 2019 Oct 29
+
+1.6: Send objects from Model to View. - 2019 Oct 29
