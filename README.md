@@ -28,7 +28,8 @@ Open the program using Visual Studio and click "Start" button to run this progra
 ## Visuals
 
 App Execution
-![Alt whiteboarding capture](/captures/web_1.JPG)
+![Alt whiteboarding capture](/captures/web_2.JPG)
+![Alt whiteboarding capture](/captures/web_3.JPG)
 
 ## Change Log
 
@@ -43,3 +44,7 @@ App Execution
 1.5: Store all rows of data into a List and return only objects with selected years. - 2019 Oct 29
 
 1.6: Send objects from Model to View. - 2019 Oct 29
+
+1.7: Debug and show results on Results.cshtml. - 2019 Oct 30
+
+1.8: Polish HTML and CSS. The program is completed. - 2019 Oct 30

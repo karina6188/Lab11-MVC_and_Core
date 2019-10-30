@@ -17,12 +17,12 @@ public class HomeController : Controller
     [HttpPost]
     public IActionResult Index(int fromYear, int toYear)
     {
-        List<TimePerson> result = TimePerson.GetPersons(fromYear, toYear);
-        return RedirectToAction("Results", result);
+        TimeSelected timeSelected = new TimeSelected(fromYear, toYear);
+        return RedirectToAction("Results", timeSelected);
     }
 
-    public ViewResult Results(TimePerson person)
+    public ViewResult Results(TimeSelected timeSelected)
     {
-        return View(person);
+        return View(TimePerson.GetPersons(timeSelected));
     }
 }
