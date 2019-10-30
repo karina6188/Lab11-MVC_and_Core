@@ -1,14 +1,40 @@
-﻿@model Class11Demo.Models.Student
+﻿@model List<lab11_mvc_and_core.Models.TimePerson>
 
-<!DOCTYPE html>
 
-<html>
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Results</title>
 </head>
 <body>
-    <h1>@Model.FirstName @Model.LastName</h1>
-    <p> This student is @Model.Age years old</p>
+    <h1>The person of the year: </h1>
+
+    <table>
+        <thead>
+        <tr>Year</tr>
+        <tr>Honor</tr>
+        <tr>Name</tr>
+        <tr>Country</tr>
+        <tr>Birth Year</tr>
+        <tr>Death Year</tr>
+        <tr>Title</tr>
+        <tr>Category</tr>
+        <tr>Context</tr>
+        </thead>
+
+        @foreach (var person in Model)
+        {
+            <tr>
+                <td>@person.Year</td>
+                <td>@person.Honor</td>
+                <td>@person.Name</td>
+                <td>@person.Country</td>
+                <td>@person.BirthYear</td>
+                <td>@person.DeathYear</td>
+                <td>@person.Title</td>
+                <td>@person.Category</td>
+                <td>@person.Context</td>
+            </tr>
+        }
+    </table>
 </body>
-</html>
+
