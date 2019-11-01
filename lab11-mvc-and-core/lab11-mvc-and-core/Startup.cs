@@ -27,6 +27,7 @@ namespace lab11_mvc_and_core
                 app.UseDeveloperExceptionPage();
             }
 
+            // Add this code to use static files such as style.css and .csv file
             app.UseStaticFiles();
 
             app.UseRouting();
