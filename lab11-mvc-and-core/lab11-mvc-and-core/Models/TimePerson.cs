@@ -4,7 +4,7 @@ using System.IO;
 using System.Linq;
 
 /// <summary>
-/// Summary description for Year
+/// TimePerson class is created to include all the properties the constructor neeeds to instantiate instances.
 /// </summary>
 
 
@@ -40,6 +40,15 @@ namespace lab11_mvc_and_core.Models
 
         }
 
+        /// <summary>
+        /// GetPersons method reads in the data from a csv file and store the data into a string array.
+        /// Then, use for loop to loop through the elements inside the array and split the data into each column from the data table.
+        /// Next, create TimePerson instances using the splitted data which match with the members inside the constructor.
+        /// The instances are added into a List<TimePerson> then the data is filtered based on the user's selection on time span.
+        /// The filtered data is returned.
+        /// </summary>
+        /// <param name="timeSelected"></param>
+        /// <returns>List<TimePerson></returns>
         public static List<TimePerson> GetPersons(TimeSelected timeSelected)
         {
             string[] allData = File.ReadAllLines("./wwwroot/personOfTheYear.csv");
