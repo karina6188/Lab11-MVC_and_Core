@@ -22,19 +22,6 @@ namespace lab11_mvc_and_core.Models
         public string Category { get; set; }
         public string Context { get; set; }
 
-        public TimePerson(int year, string honor, string name, string country, int birthYear, int deathYear, string title, string category, string context)
-        {
-            Year = year;
-            Honor = honor;
-            Name = name;
-            Country = country;
-            BirthYear = birthYear;
-            DeathYear = deathYear;
-            Title = title;
-            Category = category;
-            Context = context;
-        }
-
         public TimePerson()
         {
 
